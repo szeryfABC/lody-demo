@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Mobile Menu Toggle
     const mobileToggle = document.getElementById('mobile-toggle');
     const mobileDrawer = document.getElementById('mobile-drawer');
 
@@ -9,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Flavor Category Filters (on Smaki Lodów page)
     const filterBtns = document.querySelectorAll('.filter-btn');
     const flavorCards = document.querySelectorAll('.flavor-card');
 
@@ -32,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. FAQ Accordion Toggle
     const faqItems = document.querySelectorAll('.faq-item');
     faqItems.forEach(item => {
         const questionBtn = item.querySelector('.faq-question');
