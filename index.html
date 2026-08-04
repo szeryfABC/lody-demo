@@ -5,11 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kroczek Lody Naturalne | Rzemieślnicza Lodziarnia Premium</title>
     <meta name="description" content="Rozsmakuj się w najlepszych lodach rzemieślniczych. Naturalne składniki, świeże mleko, wyjątkowa mobilna lodziarnia z czarno-białym autem na eventy.">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    
     <style>
+        html { scroll-behavior: smooth; }
         html, body { overflow-x: hidden; max-width: 100vw; }
         * { word-wrap: break-word; }
         
@@ -32,6 +35,37 @@
                 position: relative;
                 z-index: 2;
             }
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: #000;
+            color: #fff;
+            border: 2px solid #000;
+            border-radius: 50%;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 6px 6px 0px rgba(0,0,0,0.4);
         }
     </style>
 </head>
@@ -109,36 +143,33 @@
             </div>
 
             <div class="grid-3">
-                
                 <div class="feature-card">
-                    <img src="assets/milk.png" alt="Świeże mleko" class="floating-img img-milk">
+                    <img src="assets/milk.png" alt="Świeże mleko" class="floating-img img-milk" loading="lazy" decoding="async" width="120" height="120">
                     <h3>🥛 100% Natury i Tradycji</h3>
                     <p>Opieramy się na recepturze z lat 50-tych. Nasza idealna baza to jaja od kur z wolnego wybiegu, krowie mleko i śmietana. Zero konserwantów!</p>
                 </div>
                 
                 <div class="feature-card">
-                    <img src="assets/medal.png" alt="Złoty Medal" class="floating-img img-medal">
+                    <img src="assets/medal.png" alt="Złoty Medal" class="floating-img img-medal" loading="lazy" decoding="async" width="120" height="120">
                     <h3>🥇 Nagradzane, Oryginalne Smaki</h3>
                     <p>Jesteśmy zdobywcami m.in. Złotego Medalu targów NATURA FOOD. Zaskoczymy Cię autentycznym smakiem miodu, świeżej bazylii, słonego karmelu, a dla odważnych – kawy i chilli.</p>
                 </div>
                 
                 <div class="feature-card">
-                    <img src="assets/vegetables.png" alt="Warzywa i owoce" class="floating-img img-vegetables">
+                    <img src="assets/vegetables.png" alt="Warzywa i owoce" class="floating-img img-vegetables" loading="lazy" decoding="async" width="120" height="120">
                     <h3>🥕 Wegańska Siła Warzyw i Owoców</h3>
                     <p>Nasze wegańskie sorbety to w ponad 50% czyste warzywa i owoce uzupełnione błonnikiem. Odkryj niepowtarzalne dary natury: pietruszkę, szpinak, seler z jabłkiem czy pokrzywę z imbirem.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <section class="section" style="background: var(--light-grey-bg); position: relative;">
-        <!-- Dekoracyjne grafiki pływające w tle -->
-        <img src="assets/pistachio.png" class="floating-bg bg-pistachio-1" alt="Pistacje">
-        <img src="assets/pistachio.png" class="floating-bg bg-pistachio-2" alt="Pistacje">
-        <img src="assets/caramel.png" class="floating-bg bg-caramel" alt="Karmel">
-        <img src="assets/raspberry.png" class="floating-bg bg-raspberry" alt="Maliny">
-        <img src="assets/icecram_handdrawn.png" class="floating-bg bg-icecream-drawn" alt="Lód rożek">
+        <img src="assets/pistachio.png" class="floating-bg bg-pistachio-1" alt="Pistacje" loading="lazy" decoding="async" width="80" height="80">
+        <img src="assets/pistachio.png" class="floating-bg bg-pistachio-2" alt="Pistacje" loading="lazy" decoding="async" width="80" height="80">
+        <img src="assets/caramel.png" class="floating-bg bg-caramel" alt="Karmel" loading="lazy" decoding="async" width="80" height="80">
+        <img src="assets/raspberry.png" class="floating-bg bg-raspberry" alt="Maliny" loading="lazy" decoding="async" width="80" height="80">
+        <img src="assets/icecram_handdrawn.png" class="floating-bg bg-icecream-drawn" alt="Lód rożek" loading="lazy" decoding="async" width="100" height="100">
 
         <div class="container" style="position: relative; z-index: 2;">
             <div class="section-header text-center">
@@ -150,7 +181,7 @@
                 <div class="flavor-card">
                     <div class="flavor-image-wrap">
                         <span class="flavor-badge-tag">BESTSELLER</span>
-                        <img src="assets/smaki/lody-pistacja.jpg" alt="Pistacja z Bronte" class="flavor-img">
+                        <img src="assets/smaki/lody-pistacja.jpg" alt="Pistacja z Bronte" class="flavor-img" loading="lazy" decoding="async" width="400" height="300">
                     </div>
                     <div class="flavor-body">
                         <h4>Pistacja z Bronte</h4>
@@ -162,7 +193,7 @@
                 <div class="flavor-card">
                     <div class="flavor-image-wrap">
                         <span class="flavor-badge-tag">KULTOWE</span>
-                        <img src="assets/smaki/lody-slony-karmel.jpg" alt="Słony Karmel" class="flavor-img">
+                        <img src="assets/smaki/lody-slony-karmel.jpg" alt="Słony Karmel" class="flavor-img" loading="lazy" decoding="async" width="400" height="300">
                     </div>
                     <div class="flavor-body">
                         <h4>Słony Karmel</h4>
@@ -174,7 +205,7 @@
                 <div class="flavor-card">
                     <div class="flavor-image-wrap">
                         <span class="flavor-badge-tag">SORBET 100%</span>
-                        <img src="assets/smaki/lody-malina.jpg" alt="Malina z Prosecco" class="flavor-img">
+                        <img src="assets/smaki/lody-malina.jpg" alt="Malina z Prosecco" class="flavor-img" loading="lazy" decoding="async" width="400" height="300">
                     </div>
                     <div class="flavor-body">
                         <h4>Malina z Prosecco</h4>
@@ -204,7 +235,7 @@
                     </div>
                 </div>
                 <div>
-                    <img src="assets/kroczek_car.jpg" alt="Mobilny bar Kroczek Lody Naturalne" style="border: 3px solid var(--primary-black); border-radius: var(--radius-md); box-shadow: 8px 8px 0px var(--primary-black); max-width: 100%; height: auto;">
+                    <img src="assets/kroczek_car.jpg" alt="Mobilny bar Kroczek Lody Naturalne" loading="lazy" decoding="async" width="600" height="400" style="border: 3px solid var(--primary-black); border-radius: var(--radius-md); box-shadow: 8px 8px 0px var(--primary-black); max-width: 100%; height: auto;">
                 </div>
             </div>
         </div>
@@ -258,6 +289,21 @@
         </div>
     </footer>
 
+    <button id="backToTop" class="back-to-top" aria-label="Do góry">⬆</button>
+
     <script src="script.js"></script>
+    <script>
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 400) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
