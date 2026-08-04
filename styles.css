@@ -584,6 +584,21 @@ img {
     text-transform: uppercase;
 }
 
+@media (max-width: 480px) {
+    .contact-form-box {
+        padding: 20px 16px;
+        box-shadow: 4px 4px 0px var(--primary-black);
+        max-width: 100%;
+    }
+
+    .form-group input, 
+    .form-group select, 
+    .form-group textarea {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 .form-group input, .form-group select, .form-group textarea {
     padding: 12px 14px;
     border: 2px solid var(--primary-black);
@@ -836,4 +851,53 @@ img {
     .bg-pistachio-1 { left: -80px; width: 140px; }
     .bg-raspberry { right: -60px; width: 140px; }
     .bg-icecream-drawn { right: -60px; bottom: 0; width: 200px; }
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        max-width: 100%;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .floating-img, 
+    .floating-bg {
+        display: none;
+    }
+
+    .feature-card {
+        padding: 24px 18px;
+        box-shadow: 6px 6px 0px var(--primary-black);
+    }
+
+    .feature-card:hover {
+        transform: none;
+        box-shadow: 6px 6px 0px var(--primary-black);
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
 }
