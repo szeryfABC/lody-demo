@@ -786,14 +786,15 @@ img {
     }
 
     .img-vegetables {
-        right: -30px;
-        bottom: -20px;
+        right: -45px;
+        bottom: -40px;
         width: 140px;
     }
     
     .img-milk {
         left: -40px;
         width: 120px;
+        bottom: -60px;
         height: auto;
     }
 }
