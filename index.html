@@ -109,24 +109,38 @@
             </div>
 
             <div class="grid-3">
+                
                 <div class="feature-card">
-                    <h3>🥛 Świeże Wiejskie Mleko</h3>
-                    <p>Produkcję opieramy wyłącznie na pełnym mleku i prostej śmietance od sprawdzonych lokalnych dostawców.</p>
+                    <img src="assets/milk.png" alt="Świeże mleko" class="floating-img img-milk">
+                    <h3>🥛 100% Natury i Tradycji</h3>
+                    <p>Opieramy się na recepturze z lat 50-tych. Nasza idealna baza to jaja od kur z wolnego wybiegu, krowie mleko i śmietana. Zero konserwantów!</p>
                 </div>
+                
                 <div class="feature-card">
-                    <h3>🍓 100% Prawdziwe Owoce</h3>
-                    <p>Nasze sorbety pachną prawdziwym latem. Zero sztucznych barwników, zagęszczaczy i polepszachów smaku.</p>
+                    <img src="assets/medal.png" alt="Złoty Medal" class="floating-img img-medal">
+                    <h3>🥇 Nagradzane, Oryginalne Smaki</h3>
+                    <p>Jesteśmy zdobywcami m.in. Złotego Medalu targów NATURA FOOD. Zaskoczymy Cię autentycznym smakiem miodu, świeżej bazylii, słonego karmelu, a dla odważnych – kawy i chilli.</p>
                 </div>
+                
                 <div class="feature-card">
-                    <h3>🍦 Mobilna Flota z Klasą</h3>
-                    <p>Nasz kultowy pojazd z czarno-białym zadaszeniem serwuje lody na weselach, komuniach i imprezach firmowych.</p>
+                    <img src="assets/vegetables.png" alt="Warzywa i owoce" class="floating-img img-vegetables">
+                    <h3>🥕 Wegańska Siła Warzyw i Owoców</h3>
+                    <p>Nasze wegańskie sorbety to w ponad 50% czyste warzywa i owoce uzupełnione błonnikiem. Odkryj niepowtarzalne dary natury: pietruszkę, szpinak, seler z jabłkiem czy pokrzywę z imbirem.</p>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <section class="section" style="background: var(--light-grey-bg);">
-        <div class="container">
+    <section class="section" style="background: var(--light-grey-bg); position: relative;">
+        <!-- Dekoracyjne grafiki pływające w tle -->
+        <img src="assets/pistachio.png" class="floating-bg bg-pistachio-1" alt="Pistacje">
+        <img src="assets/pistachio.png" class="floating-bg bg-pistachio-2" alt="Pistacje">
+        <img src="assets/caramel.png" class="floating-bg bg-caramel" alt="Karmel">
+        <img src="assets/raspberry.png" class="floating-bg bg-raspberry" alt="Maliny">
+        <img src="assets/icecram_handdrawn.png" class="floating-bg bg-icecream-drawn" alt="Lód rożek">
+
+        <div class="container" style="position: relative; z-index: 2;">
             <div class="section-header text-center">
                 <span class="section-tag">KARTA DESEROWA</span>
                 <h2 class="section-title">Wybrane dzisiejsze smaki</h2>
@@ -134,9 +148,9 @@
 
             <div class="flavors-grid">
                 <div class="flavor-card">
-                    <div class="flavor-header-stripe">
+                    <div class="flavor-image-wrap">
                         <span class="flavor-badge-tag">BESTSELLER</span>
-                        <span class="flavor-emoji">🥜</span>
+                        <img src="assets/smaki/lody-pistacja.jpg" alt="Pistacja z Bronte" class="flavor-img">
                     </div>
                     <div class="flavor-body">
                         <h4>Pistacja z Bronte</h4>
@@ -146,9 +160,9 @@
                 </div>
 
                 <div class="flavor-card">
-                    <div class="flavor-header-stripe">
+                    <div class="flavor-image-wrap">
                         <span class="flavor-badge-tag">KULTOWE</span>
-                        <span class="flavor-emoji">🍯</span>
+                        <img src="assets/smaki/lody-slony-karmel.jpg" alt="Słony Karmel" class="flavor-img">
                     </div>
                     <div class="flavor-body">
                         <h4>Słony Karmel</h4>
@@ -158,9 +172,9 @@
                 </div>
 
                 <div class="flavor-card">
-                    <div class="flavor-header-stripe">
+                    <div class="flavor-image-wrap">
                         <span class="flavor-badge-tag">SORBET 100%</span>
-                        <span class="flavor-emoji">🍓</span>
+                        <img src="assets/smaki/lody-malina.jpg" alt="Malina z Prosecco" class="flavor-img">
                     </div>
                     <div class="flavor-body">
                         <h4>Malina z Prosecco</h4>

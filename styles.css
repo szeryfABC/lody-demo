@@ -486,6 +486,8 @@ img {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px;
+    position: relative;
+    z-index: 2;
 }
 
 .flavor-card {
@@ -496,9 +498,27 @@ img {
     transition: var(--transition);
 }
 
+.flavor-image-wrap {
+    height: 240px; 
+    position: relative;
+    overflow: hidden;
+    border-bottom: 2px solid var(--primary-black);
+}
+
+.flavor-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
 .flavor-card:hover {
     transform: translateY(-6px);
     box-shadow: 8px 8px 0px var(--primary-black);
+}
+
+.flavor-card:hover .flavor-img {
+    transform: scale(1.05);
 }
 
 .flavor-header-stripe {
@@ -515,14 +535,16 @@ img {
 
 .flavor-badge-tag {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 16px;
+    left: 16px;
     background: var(--primary-black);
     color: var(--pure-white);
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     font-weight: 800;
-    padding: 4px 10px;
+    padding: 6px 12px;
     letter-spacing: 0.1em;
+    z-index: 2;
+    border-radius: var(--radius-sm);
 }
 
 .flavor-body { padding: 24px; }
@@ -630,4 +652,188 @@ img {
         background: rgba(253, 248, 238, 0.85);
         z-index: 1;
     }
+}
+
+.section {
+    position: relative;
+    background-color: #F8F5F0;
+    padding: 80px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-header {
+    margin-bottom: 60px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.section-tag {
+    font-size: 13px;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 2px;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.section-title {
+    font-size: 36px;
+    font-weight: 900;
+    color: #111;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.feature-card {
+    position: relative;
+    background: #ffffff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    border: 3px solid #111;
+    box-shadow: 12px 12px 0px #111; 
+    z-index: 1;
+    transition: transform 0.2s ease;
+}
+
+.feature-card:hover {
+    transform: translate(-4px, -4px);
+    box-shadow: 16px 16px 0px #111; 
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #111;
+    text-transform: uppercase;
+    line-height: 1.4;
+}
+
+.feature-card p {
+    color: #666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.floating-img {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.img-milk {
+    left: -90px;
+    bottom: -100px;
+    width: 165px;
+    height: 250px;
+    object-fit: contain;
+    top: auto;
+    transform: none;
+}
+
+.img-medal {
+    right: -30px;
+    bottom: -30px;
+    width: 90px;
+    z-index: 15; 
+}
+
+.img-vegetables {
+    right: -85px;
+    bottom: -30px;
+    top: auto;
+    transform: none;
+    width: 135px; 
+}
+
+@media (max-width: 992px) {
+    .grid-3 {
+        grid-template-columns: 1fr;
+        gap: 60px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .img-vegetables {
+        right: -30px;
+        bottom: -20px;
+        width: 140px;
+    }
+    
+    .img-milk {
+        left: -40px;
+        width: 120px;
+        height: auto;
+    }
+}
+
+.floating-bg {
+    position: absolute;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.bg-pistachio-1 {
+    left: -40px;
+    top: 15%;
+    width: 180px;
+    transform: rotate(-15deg);
+}
+
+.bg-pistachio-2 {
+    left: 20px;
+    top: 45%;
+    width: 120px;
+    transform: rotate(25deg);
+    opacity: 0.8;
+}
+
+.bg-caramel {
+    left: -20px;
+    bottom: -30px;
+    width: 220px;
+    transform: rotate(10deg);
+}
+
+.bg-raspberry {
+    right: -20px;
+    top: 8%;
+    width: 190px;
+    transform: rotate(15deg);
+}
+
+.bg-icecream-drawn {
+    right: -50px;
+    bottom: -40px;
+    width: 280px;
+    transform: rotate(-12deg);
+    mix-blend-mode: multiply;
+    opacity: 0.7;
+}
+
+@media (max-width: 1180px) {
+    .flavors-grid { 
+        grid-template-columns: 1fr; 
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    .bg-pistachio-1 { left: -80px; width: 140px; }
+    .bg-raspberry { right: -60px; width: 140px; }
+    .bg-icecream-drawn { right: -60px; bottom: 0; width: 200px; }
 }
