@@ -902,3 +902,11 @@ img {
         padding: 0 10px;
     }
 }
+
+@media (min-width: 1400px) {
+    .bg-pistachio-1 { left: calc(50% - 900px); }
+    .bg-pistachio-2 { left: calc(50% - 900px); }
+    .bg-caramel { left: calc(50% - 900px); }
+    .bg-raspberry { right: calc(50% - 900px); }
+    .bg-icecream-drawn { right: calc(50% - 900px); }
+}
